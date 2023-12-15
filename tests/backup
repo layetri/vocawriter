@@ -1,0 +1,64 @@
+; parses input data into header text
+(define (parse-header)
+    (string-append "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>
+            <vsq4 xmlns=\"http://www.yamaha.co.jp/vocaloid/schema/vsq4/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.yamaha.co.jp/vocaloid/schema/vsq4/ vsq4.xsd\">
+            <vender><![CDATA[Yamaha corporation]]></vender>
+            <version><![CDATA[3.0.0.11]]></version>
+            <vVoiceTable>
+                <vVoice>
+                    <bs>0</bs>
+                    <pc>7</pc>
+                    <id><![CDATA[" (list-ref (hash-ref singers voca-singer) 0) "]]></id>
+                    <name><![CDATA[]]></name>
+                    <vPrm>
+                        <bre>0</bre>
+                        <bri>0</bri>
+                        <cle>0</cle>
+                        <gen>0</gen>
+                        <ope>0</ope>
+                    </vPrm>
+                </vVoice>
+            </vVoiceTable>"))
+
+; parses input data into track text
+(define (parse-track)
+    (string-append "<vsTrack>
+        <tNo>0</tNo>
+        <name><![CDATA[VocaWriter_EXPORT]]></name>
+        <comment><![CDATA[Exported by VocaWriter.]]></comment>
+        <vsPart>
+            <t>0</t>
+            <playTime>" (number->string partLen) "</playTime>
+            <name><![CDATA[VocaWriter_PART]]></name>
+            <comment><![CDATA[]]></comment>
+            <sPlug>
+                <id><![CDATA[ACA9C502-A04B-42b5-B2EB-5CEA36D16FCE]]></id>
+                <name><![CDATA[VOCALOID2 Compatible Style]]></name>
+                <version><![CDATA[3.0.0.1]]></version>
+            </sPlug>
+            <pStyle>
+                <v id=\"accent\">50</v>
+                <v id=\"bendDep\">8</v>
+                <v id=\"bendLen\">0</v>
+                <v id=\"decay\">50</v>
+                <v id=\"fallPort\">0</v>
+                <v id=\"opening\">127</v>
+                <v id=\"risePort\">0</v>
+            </pStyle>
+            <singer>
+                <t>0</t>
+                <bs>0</bs>
+                <pc>7</pc>
+            </singer>
+            <cc>
+                <t>0</t>
+                <v id=\"S\">1</v>
+            </cc>"))
+
+; consolidates all ingredients into one callable function
+(define (voca->text)
+    (string-append (parse-header) "\n" (file->string "/Users/layetri/Development/VocaWriter/files/vsqx-begin") "\n" (parse-track) "\n" (inject-notes test-part) "\n" (file->string "/Users/layetri/Development/VocaWriter/files/vsqx-end")))
+
+(vocaloid-singer "MikuENG")
+
+(voca-out (voca->text) "/Users/layetri/Development/VocaWriter/files/test.vsqx")

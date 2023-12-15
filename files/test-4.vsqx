@@ -1,0 +1,73 @@
+<note> 
+ <t>360</t> 
+ <dur>120</dur> 
+ <n>60</n> 
+ <v>64</v> 
+ <y><![CDATA[la]]></y> 
+ <p><![CDATA[la]]></p> 
+ <nStyle> 
+<v id="accent">80</v>
+                       <v id="bendDep">0</v>
+                       <v id="bendLen">0</v>
+                       <v id="decay">70</v>
+                       <v id="fallPort">0</v>
+                       <v id="opening">127</v>
+                       <v id="risePort">0</v>
+                       <v id="vibLen">0</v>
+                       <v id="vibType">0</v> 
+</nStyle> 
+ </note><note> 
+ <t>240</t> 
+ <dur>120</dur> 
+ <n>64</n> 
+ <v>64</v> 
+ <y><![CDATA[la]]></y> 
+ <p><![CDATA[la]]></p> 
+ <nStyle> 
+<v id="accent">80</v>
+                       <v id="bendDep">0</v>
+                       <v id="bendLen">0</v>
+                       <v id="decay">70</v>
+                       <v id="fallPort">0</v>
+                       <v id="opening">127</v>
+                       <v id="risePort">0</v>
+                       <v id="vibLen">0</v>
+                       <v id="vibType">0</v> 
+</nStyle> 
+ </note><note> 
+ <t>120</t> 
+ <dur>120</dur> 
+ <n>62</n> 
+ <v>64</v> 
+ <y><![CDATA[la]]></y> 
+ <p><![CDATA[la]]></p> 
+ <nStyle> 
+<v id="accent">80</v>
+                       <v id="bendDep">0</v>
+                       <v id="bendLen">0</v>
+                       <v id="decay">70</v>
+                       <v id="fallPort">0</v>
+                       <v id="opening">127</v>
+                       <v id="risePort">0</v>
+                       <v id="vibLen">0</v>
+                       <v id="vibType">0</v> 
+</nStyle> 
+ </note><note> 
+ <t>0</t> 
+ <dur>120</dur> 
+ <n>60</n> 
+ <v>64</v> 
+ <y><![CDATA[la]]></y> 
+ <p><![CDATA[la]]></p> 
+ <nStyle> 
+<v id="accent">80</v>
+                       <v id="bendDep">0</v>
+                       <v id="bendLen">0</v>
+                       <v id="decay">70</v>
+                       <v id="fallPort">0</v>
+                       <v id="opening">127</v>
+                       <v id="risePort">0</v>
+                       <v id="vibLen">0</v>
+                       <v id="vibType">0</v> 
+</nStyle> 
+ </note>
